@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "login page testing",
   "version": "0",
   "homepage": "",
   "authors": [
@@ -21,6 +21,7 @@
     "jquery.cookie": "jquery-cookie#~1.4.1",
     "font-awesome": "~4.7.0",
     "typeahead.js": "^0.11.1",
-    "matchHeight": "0.7.0"
+    "matchHeight": "0.7.0",
+    "ucf-athena-framework": "^1.0.0-beta"
   }
 }

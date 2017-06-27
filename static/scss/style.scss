@@ -1,0 +1,172 @@
+// Variable overrides
+@import 'variables';
+
+
+// Import vendor assets
+// @import '../../src/components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import '../../bower_components/ucf-athena-framework/src/scss/framework';
+@import '../../src/components/font-awesome/scss/font-awesome';
+@import '../../src/components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css';
+
+@import 'mixins';
+
+$light-gray: #f9f9f9;
+
+body {
+  //background: gold;
+}
+
+.navbar-custom {
+  a:link, a:visited {
+    color: #000;
+  }
+  a:hover {
+    color: #fff;
+    background: #000
+  }
+}
+
+.jumbotron {
+  margin-bottom: 0;
+
+  &.jumbotron-background {
+    background: transparent;
+    position: relative;
+    color: $white;
+  }
+}
+
+.jumbotron-background {
+  a:link, a:visited {
+    color: $white;
+  }
+}
+
+.login-header {
+  color: $ucf-gold;
+  padding: 0 0 .75em .75em;
+}
+
+.login-form-container {
+  border: 1px solid rgba(225, 225, 225, 0.35);
+  padding: 1.5em 2em;
+  margin-bottom: 2em;
+
+  .form-control {
+    font-family: 'Georgia';
+    font-size: 24px;
+    color: $black;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .login-form-label {
+    font-weight: 500;
+    color: $ucf-gold;
+  }
+}
+
+.login-form-links,
+.login-small-text {
+  font-size: 12px;
+
+  a:link {
+    text-decoration: underline;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.login-top-links {
+  a {
+    font-weight: 600;
+  }
+}
+
+.login-top-links li + li a {
+  border-left: 1px solid rgba(255, 204, 0, 0.65);
+}
+
+.nav-item-last {
+  position: relative;
+  right: inherit;
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.main-choices {
+  background: $light-gray;
+
+  li {
+    color: $ucf-gold;
+    text-decoration: none;
+    position: relative;
+  }
+
+  a:link, a:visited {
+    color: $black;
+    font-weight: 500px;
+    text-decoration: none;
+    padding: 2em;
+
+    .fa {
+      display: block;
+      font-size: 24px;
+    }
+
+    .link-text {
+      display: block;
+      text-align: center;
+      position: relative;
+
+      &:after {
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 3px;
+        min-width: 2rem;
+        position: absolute;
+        background: $ucf-gold;
+        width: 100%;
+      }
+    }
+  }
+
+
+}
+
+.link-ankle {
+  background: $black;
+  color: $white;
+  padding: 4rem;
+
+  a:link, a:visited {
+    color: $white;
+  }
+
+  .heading-underline {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .bordered-content {
+    border-left: solid 1px #333;
+    border-right: solid 1px #333;
+    padding-left: 2rem;
+    margin-left: -2rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+
+    padding-top: 0.35em;
+    }
+  }
+}
