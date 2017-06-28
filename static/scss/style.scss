@@ -84,9 +84,17 @@ body {
   }
 }
 
+.login-small-text {
+  padding: 0 2.75em;
+}
+
 .login-top-links li + li a {
   border-left: 1px solid rgba(255, 204, 0, 0.65);
 }
+
+// .nav-item .nav-link {
+//   margin-top: 28px;
+// }
 
 .nav-item-last {
   position: relative;
@@ -112,11 +120,7 @@ body {
     font-weight: 500px;
     text-decoration: none;
     padding: 2em;
-
-    .fa {
-      display: block;
-      font-size: 24px;
-    }
+    padding-top: calc(2em + 35px);
 
     .link-text {
       display: block;
@@ -135,9 +139,44 @@ body {
       }
     }
   }
-
-
 }
+
+.icon-fa {
+  position: relative;
+}
+
+.icon-fa:before {
+  content: "\f109";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #000;
+  font-size: 28px;
+  padding-right: .5em;
+  position: absolute;
+  top: -38px;
+  left: 0;
+  right: 0;
+}
+
+.icon-search:before {
+  content: "\f002";
+}
+
+.icon-list:before {
+  content: "\f03a";
+}
+
+.icon-envelope:before {
+  content: "\f0e0";
+}
+
+.icon-laptop:before {
+  content: "\f109";
+  font-size: 32px;
+}
+
 
 .link-ankle {
   background: $black;
@@ -168,5 +207,34 @@ body {
 
     padding-top: 0.35em;
     }
+  }
+}
+
+.content-boxes {
+  padding: 3em 0 2em 0;
+}
+
+.content-box {
+  padding: 2em;
+
+  &.content-box-primary {
+    background-color: $ucf-gold;
+  }
+
+  &.content-box-promo {
+    background-repeat: no-repeat;
+  }
+
+}
+
+.content-box-promo-think30 {
+  background-image:url('../img/think-30-promo-bg.png');
+  background-position: 0 5em;
+  overflow: auto;
+
+  .content-box-promo-text {
+    width: 50%;
+    font-size: 14px;
+    float: right;
   }
 }
