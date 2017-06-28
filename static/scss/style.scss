@@ -126,6 +126,7 @@ body {
       display: block;
       text-align: center;
       position: relative;
+      font-weight: 500;
 
       &:after {
         bottom: 0;
@@ -177,6 +178,42 @@ body {
   font-size: 32px;
 }
 
+.icon-grid:before {
+  content: "\f00a";
+}
+
+.icon-cap:before {
+  content: "\f19d";
+}
+
+.icon-book:before {
+  content: "\f02d";
+}
+
+.icon-parking:before {
+  content: "\f1b9";
+  font-size: 32px;
+}
+
+
+.content-box-dark {
+    a:link, a:visited {
+    color: $white;
+  }
+
+
+}
+
+.nav-grid {
+  .nav-item {
+    padding: 3em 0;
+  }
+}
+
+.content-box-dark .icon-fa:before {
+  color: $ucf-gold;
+}
+
 
 .link-ankle {
   background: $black;
@@ -187,7 +224,7 @@ body {
     color: $white;
   }
 
-  .heading-underline {
+  .ankle-header {
     font-size: 16px;
     font-weight: 500;
   }
@@ -216,6 +253,7 @@ body {
 
 .content-box {
   padding: 2em;
+  background-color: #f9f9f9;
 
   &.content-box-primary {
     background-color: $ucf-gold;
@@ -225,11 +263,24 @@ body {
     background-repeat: no-repeat;
   }
 
+  &.content-box-dark {
+    background: $black;
+    color: $white;
+  }
+
+  .content-box-header {
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    border-bottom: solid 1px #cccccc;
+  }
+
 }
 
 .content-box-promo-think30 {
   background-image:url('../img/think-30-promo-bg.png');
-  background-position: 0 5em;
+  background-position: 0 6em;
   overflow: auto;
 
   .content-box-promo-text {
