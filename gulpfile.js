@@ -18,7 +18,7 @@ var gutil = require('gulp-util');
 
 var configDefault = {
       devPath: './dev',
-      scssPath: './static/scss',
+      scssPath: './scss',
       cssPath: './static/css',
       jsPath: './static/js',
       jsMinPath: './static/js',
@@ -62,6 +62,22 @@ gulp.task('scss-lint', function() {
 gulp.task('css-main', function() {
   gulp.src(config.scssPath + '/style.scss')
     .pipe(sass().on('error', sass.logError))
+    //.pipe(minifyCss({compatibility: 'ie8'}))
+    //.pipe(rename('style.min.css'))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions', 'ie >= 8'],
+      cascade: false
+    }))
+    .pipe(bless())
+    .pipe(gulp.dest(config.cssPath))
+    .pipe(browserSync.stream());
+});
+
+
+// Compile + bless primary scss files
+gulp.task('css-main-min', function() {
+  gulp.src(config.scssPath + '/style.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(rename('style.min.css'))
     .pipe(autoprefixer({
@@ -74,7 +90,7 @@ gulp.task('css-main', function() {
 });
 
 // All css-related tasks
-gulp.task('css', ['css-main']);
+gulp.task('css', ['css-main', 'css-main-min']);
 
 
 // Run jshint on all js files in jsPath (except already minified files.)
