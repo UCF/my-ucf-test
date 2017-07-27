@@ -52,6 +52,10 @@ body {
   padding: 1.5em 2em;
   margin-bottom: 2em;
 
+  &.no-fields {
+    padding: 2.5em 2em 2em 2em;
+  }
+
   .form-control {
     font-family: 'Georgia';
     font-size: 24px;
